@@ -5,7 +5,7 @@ import type { AuthorizationPayload, CallValidHeaders } from "../models";
 export const call = async <T>(
   config: {
     url: string;
-    method?: "GET" | "POST";
+    method?: "GET" | "POST" | "DELETE" | "PUT";
     headers?: CallValidHeaders;
   },
   authorization: AuthorizationPayload,

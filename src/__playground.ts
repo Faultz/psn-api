@@ -17,13 +17,16 @@
  * able to either.
  */
 import {
+  addFriend,
+  deleteFriend,
   exchangeCodeForAccessToken,
   exchangeNpssoForCode,
   getFriendsList,
   getProfileFromAccountId,
   getRecentlyPlayedGames,
   getUserTitles,
-  makeUniversalSearch
+  makeUniversalSearch,
+  sendFriendRequest
 } from "./index";
 
 // MODIFY THIS VALUE.
@@ -44,9 +47,12 @@ async function main() {
   const accessCode = await exchangeNpssoForCode(myNpsso);
   const authorization = await exchangeCodeForAccessToken(accessCode);
 
-  const friends = await getFriendsList({
-    accessToken: authorization.accessToken
-  });
+  const response = await deleteFriend(
+    { accessToken: authorization.accessToken },
+    "Bonkerlands"
+  );
+
+  console.log(response);
 }
 
 main();
