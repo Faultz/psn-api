@@ -91,12 +91,6 @@
       "brotli": true
     }
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

@@ -19,11 +19,16 @@
 import {
   exchangeCodeForAccessToken,
   exchangeNpssoForCode,
-  getUserTitles
+  getFriendsList,
+  getProfileFromAccountId,
+  getRecentlyPlayedGames,
+  getUserTitles,
+  makeUniversalSearch
 } from "./index";
 
 // MODIFY THIS VALUE.
-const myNpsso = "myNpsso";
+const myNpsso =
+  "kFAjlFcpsDahmu9psgzOGsbKqdQXE7IPHI3tcp8aRdidS8QxjMeFDSfOVP1cqmiX";
 
 async function main() {
   console.log("🚀  psn-api playground is running.\n");
@@ -39,12 +44,9 @@ async function main() {
   const accessCode = await exchangeNpssoForCode(myNpsso);
   const authorization = await exchangeCodeForAccessToken(accessCode);
 
-  const userTitlesResponse = await getUserTitles(
-    { accessToken: authorization.accessToken },
-    "me"
-  );
-
-  console.log(userTitlesResponse);
+  const friends = await getFriendsList({
+    accessToken: authorization.accessToken
+  });
 }
 
 main();
