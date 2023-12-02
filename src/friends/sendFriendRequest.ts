@@ -5,8 +5,7 @@ import { FRIEND_BASE_URL } from "./FRIEND_BASE_URL";
 
 export const sendFriendRequest = async (
   authorization: AuthorizationPayload,
-  username: string,
-  requestMessage: string
+  username: string
 ) => {
   const userProfile = await getProfileFromUserName(authorization, "me");
 

@@ -47,7 +47,6 @@
   "dependencies": {
     "isomorphic-unfetch": "^3.1.0"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
@@ -60,6 +59,7 @@
     "@typescript-eslint/parser": "^5.50.0",
     "cz-conventional-changelog": "^3.3.0",
     "dotenv-flow-cli": "^1.0.0",
+    "dts": "^0.1.1",
     "dts-cli": "^1.6.3",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
