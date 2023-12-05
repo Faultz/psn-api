@@ -1,6 +1,7 @@
 export * from "./authenticate";
 export * from "./friends";
 export * from "./graphql";
+export * from "./groups";
 export * from "./models";
 export * from "./search";
 export * from "./trophy";
